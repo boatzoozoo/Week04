@@ -13,6 +13,7 @@ namespace Lab01
             Console.WriteLine("{0:F4}", i);
             Console.WriteLine("{0:F5}", i);
 
+
         }
     }
 }

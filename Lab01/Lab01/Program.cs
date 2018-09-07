@@ -6,7 +6,11 @@ namespace Lab01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("{0:#.###}.", 1234.56789);
+            char ch;
+            Console.Write("Press a key followed by ENTER:");
+            ch = (char)Console.Read();  // get a char
+            Console.WriteLine("Your key is: " + ch);
+
         }
     }
 }

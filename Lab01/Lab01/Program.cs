@@ -5,35 +5,29 @@ namespace Lab01
     class Program
     {
         static void Main(string[] args)
-
         {
-            int a, b, x, y,Sum1,Sum2,Sum3,Sum4,Sum5,Sum6,Sum7,Sum8,Sum9,Sum10;
-            a = 10; b = 20;
-            x = 5 ; y = 2;
-            Sum1=a + b ;
-            Console.WriteLine(" sum 1 a+b={0} ",Sum1);
-            Sum2 = x - b;    
-            Console.WriteLine(" sum 2 x-b={0} ",Sum2);
-            Sum3 = x * b;
-            Console.WriteLine(" sum 3 x*b={0} ",Sum3);
-            Sum4 = y / a;
-            Console.WriteLine(" sum 4 y/a={0} ",Sum4);
-            Sum5 = b % y;
-            Console.WriteLine(" sum 5 b%y={0} ",Sum5);
-            Sum6 = y + 10 % x;
-            Console.WriteLine(" sum 6 y+10%x={0} ", Sum6);
-            Sum7 = a / 3 * 5;
-            Console.WriteLine(" sum 7 a/3*5={0} ", Sum7);
-            Sum8 = 9 / 2 * a;
-            Console.WriteLine(" sum 8 9/2*a={0} ",Sum8);
-            Sum9 = y % 8;
-            Console.WriteLine(" sum 9 y%8={0} ",Sum9);
-            Sum10 = 100 * x + y % 2 - a;
-            Console.WriteLine(" sum 10 100*x+y%2-a={0} ",Sum10);
-            
-        }
-        }
+            {
+                const double kmToau = 0.000000006685;
+                const double kmTomile = 0.621371192;
+                const double lightSpeed = 186000d;   // miles per second
+                double lighttime, sunto, dis, sum;
+                char k;
+                do
+                {
 
+                    Console.Write("\nPlease Distance KM = ");
+                    dis = double.Parse(Console.ReadLine());
+                    sum = dis * kmToau;      // แปลงเป็น A.U
+                    Console.WriteLine("DistanceToSun = {0:F4} A.U", sum);
+                    sunto = dis * kmTomile;    // หาระยะห่างจากดาวถึงดวงอาทิตย์เป็นหน่วย Mile
+                    Console.WriteLine("DistanceMile = {0:F4} Mile", sunto);
+                    lighttime = sunto / lightSpeed;  // ระยะห่าง(ไมล์) * ความเร็วแสง (ไมล์ต่อวิ) = ระยะเวลาของแสงจากดาวถึงอาทิตย์ (ต่อวิ)
+                    Console.WriteLine("LightSpeedTime = {0:F2} Minutes", lighttime / 60);// ระยะเวลาของแสงจากดาวถึงอาทิตย์(ต่อนาที)
 
+                    k = Console.ReadKey().KeyChar;
+                }
+                while ((k == 'Y') || (k == 'y'));
+            }
+        }
     }
-
+}

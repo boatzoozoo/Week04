@@ -5,23 +5,24 @@ namespace Lab01
     class Program
     {
         static void Main(string[] args)
+
         {
-            bool A, B, Y;
-            Console.WriteLine("      Y = A XOR B");
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("   A      B\t|  Y");
-            Console.WriteLine("-----------------------");
-            A = false; B = false; Y = A ^ B;
-            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
-            A = false; B = true; Y = A ^ B;
-            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
-            A = true; B = false; Y = A ^ B;
-            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
-            A = true; B = true; Y = A ^ B;
-            Console.WriteLine(" {0}\t{1}\t| {2}", A, B, Y);
-            Console.WriteLine("-----------------------\n");
-
-
+            int a, b, c, d, e, f;
+            a = 1;
+            Console.WriteLine("a = 1");
+            b = a + 6;
+            Console.WriteLine("b = a + 6 = {0}", b);
+            c = b - 3;
+            Console.WriteLine("c = b - 3 = {0}", c);
+            d = c * 2;
+            Console.WriteLine("d = c * 2 = {0}", d);
+            e = d / 2;
+            Console.WriteLine("e = d / 2 = {0}", e);
+            f = e % 2;
+            Console.WriteLine("f = e % 2 = {0}", f);
         }
+        }
+
+
     }
-}
+
